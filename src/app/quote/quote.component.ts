@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 
@@ -10,6 +9,18 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = 
   [
+    // new Quote
+    // (
+    //   1,
+    //   'Very little is needed to make a happy life; it is all within yourself, in your way of thinking.',
+    //   'Marcus Aurelius',
+      
+     
+    //   new Date('October 01, 2018 11:24:00')
+    // )
+    new Quote(2,'Succesful and unsuccesful dont vary in ability they vary in their desires to do things', 'they dont vary at all',new Date(2019,6,9)),
+    new Quote(3,'Strive for progress not perfection','perfection',new Date(2019,1,12)),
+    new Quote(4,'Theres no shortcuts to any place worth going','Pupper likes expensive snacks',new Date(2019,0,18)),
     
   ];
   addNewQuote(quote){
