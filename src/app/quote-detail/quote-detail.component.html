@@ -1,3 +1,8 @@
+<div class="quote-detail">
+    <div class="votes">
+      Total Up Votes: <span>{{quote.upVote}}</span>
+    </div>
 <p>{{quote.description}}</p>
 <p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
 <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<app-vote></app-vote>
