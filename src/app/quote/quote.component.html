@@ -5,10 +5,10 @@
   </h1>
   <hr>
   <div class="row">
-    <div class="col-md-12 form ">
+    <div class="col-md-6 form ">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-6">
 
       <div *ngFor='let quote of quotes;let i = index'>
 
