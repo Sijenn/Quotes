@@ -6,4 +6,11 @@ background-color:aqua;
 
 .form {
     background-color: aqua;
+    padding: 50px;
+}
+h1{
+    background-image: url("./assets/read.jpg");
+    font-style: italic;
+    color: aquamarine;
+    text-align: center;
 }
