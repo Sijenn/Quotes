@@ -1,14 +1,23 @@
 <div class="container">
-  <h1> 
+  <h1>
     Feeling down?<br>
     Read and get inspired
   </h1>
   <hr>
   <div class="row">
-    <div class="col-md-6 form ">
+
+    <div class="col-md-6 form">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 quotes">
+      <p>Quotes are inspirational</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 ">
 
       <div *ngFor='let quote of quotes;let i = index'>
 
@@ -24,8 +33,5 @@
           </div>
         </div>
       </div>
-
     </div>
-
-    <p *ngIf='quotes.length > 5'>I Hope my quotes inspire you</p>
   </div>

@@ -1,16 +1,19 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-/* body {
-background-color:aqua;
-} */
+body {
+  background-image: url("./assets/read.jpg")
+}
 
 .form {
-    background-color: bisque;
-   text-align: center;
+  background-color: #007991;
+  text-align: center;
 }
-h1{
-    background-image: url("./assets/read.jpg");
-    font-style: italic;
-    color: aquamarine;
-    text-align: center;
+
+h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+.quotes {
+  background-color: #78ffd6;
 }
