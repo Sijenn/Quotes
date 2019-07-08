@@ -18,9 +18,9 @@ export class QuoteComponent implements OnInit {
      
     //   new Date('October 01, 2018 11:24:00')
     // )
-    new Quote(2,'Succesful and unsuccesful dont vary in ability they vary in their desires to do things', 'they dont vary at all',new Date(2019,6,9)),
-    new Quote(3,'Strive for progress not perfection','perfection',new Date(2019,1,12)),
-    new Quote(4,'Theres no shortcuts to any place worth going','Pupper likes expensive snacks',new Date(2019,0,18)),
+    new Quote(2,'Succesful and unsuccesful dont vary in ability they vary in their desires to do things', 0,'they dont vary at all',new Date(2019,6,9)),
+    new Quote(3,'Strive for progress not perfection',0,'perfection',new Date(2019,1,12)),
+    new Quote(4,'Theres no shortcuts to any place worth going',0,'Pupper likes expensive snacks',new Date(2019,0,18)),
     
   ];
   addNewQuote(quote){
