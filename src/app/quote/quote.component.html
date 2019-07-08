@@ -1,59 +1,31 @@
 <div class="container">
-  <h1>INSPIRATIONAL QUOTES</h1>
+  <h1> 
+    Feeling down?<br>
+    Read and get inspired
+  </h1>
   <hr>
-  <div>
-
-  </div>
-
   <div class="row">
-    <div class="col-md-6 form">
+    <div class="col-md-6 form ">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
     <div class="col-md-6">
+
       <div *ngFor='let quote of quotes;let i = index'>
+
         <div class="card card-body my-3 bg-purple">
           <div>
             <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary"> Quote Details</button>
-          </div>
 
-          <div *ngIf='quote.showDescription'>
-            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-          </div>
+            <div *ngIf='quote.showDescription'>
+              <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+            </div>
 
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <p *ngIf='quotes.length > 5'>I Hope my quotes inspire you</p>
-</div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Add Quote
-  </button>
-  
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
     </div>
+
+    <p *ngIf='quotes.length > 5'>I Hope my quotes inspire you</p>
   </div>
