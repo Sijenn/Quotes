@@ -10,28 +10,29 @@
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
     <div class="col-md-6 quotes">
-      <p>Quotes are inspirational</p>
+      <h2>Be Inspired</h2>
+      
+        <p>Send message to the future by writing it today!</p>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container ">
   <div class="row">
-    <div class="col-md-12 ">
 
-      <div *ngFor='let quote of quotes;let i = index'>
+    <div *ngFor='let quote of quotes;let i = index'class="col-md-4">
 
-        <div class="card card-body my-3 bg-purple">
-          <div>
-            <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
-            <button (click)='toggleDetails(i)' class="btn btn-primary"> Quote Details</button>
+      <div class="card card-body my-3 bg-purple">
+        <div>
+          <h6 id={{i}} appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary"> Quote Details</button>
 
-            <div *ngIf='quote.showDescription'>
-              <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-            </div>
-
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
           </div>
+
         </div>
       </div>
     </div>
   </div>
+</div>
